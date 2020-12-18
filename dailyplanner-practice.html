@@ -30,83 +30,112 @@
     </header>
     <div class="container">
         <!-- Timeblocks go here -->
+        <!-- //Used bootstrap tables to make repeat rows, assiging each row beyond the head rows a data tag based on the time of day. -->
+        <!-- //Buttons styled using bootsrap icons. Shared data tags make it easier to retrieve from local Storage -->
         <table class="table table-bordered">
             <thead class=rowOne>
                 <tr>
-                    <th style="width:10%" scope = col class="time-row">Time</th>
-                    <th scope = col class="input-row">Input</th>
-                    <th style="width:10%" scope = col class="buttom-row">Button</th>
+                    <th style="width:10%" scope = col class="time-head">Time</th>
+                    <th scope = col class="input-head">Input</th>
+                    <th style="width:10%" scope = col class="button-head">Save</th>
                 </tr>
             </thead>
             <thead class=rowTwo>
                 <tr>
                     <th scope = "row" class="time-row">9:00 AM</th>
-                    <td contenteditable="true" class="input-row" input="form"></th>
-                    <td class="bottom-row"></th>
+                    <td contenteditable="true" class="input-row" data-hour="9" input="form"></th>
+                    <td class="button-row"><button type="button" data-hour="9" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-clipboard-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3zM8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
+                      </svg></button></th>
                 </tr>
             </thead>
             <thead class=rowThree>
                 <tr>
                     <th scope = "row" class="time-row">10:00 AM</th>
-                    <td contenteditable="true" class="input-row"></th>
-                    <td class="bottom-row"></th>
+                    <td contenteditable="true" class="input-row" data-hour="10"  ></th>
+                    <td class="button-row"><button type="button" data-hour="10" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-clipboard-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3zM8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
+                      </svg></button></th>
                 </tr>
             </thead>
             <thead class=rowFour>
                 <tr>
                     <th scope = "row" class="time-row">11:00 AM</th>
-                    <td contenteditable="true" class="input-row"></th>
-                    <td class="bottom-row"></th>
+                    <td contenteditable="true" class="input-row" data-hour="11"></th>
+                    <td class="button-row"><button type="button" data-hour="11" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-clipboard-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3zM8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
+                      </svg></button></th>
                 </tr>
             </thead>
             <thead class=rowFive>
                 <tr>
                     <th scope = "row" class="time-row">12:00 PM</th>
-                    <td contenteditable="true" class="input-row"></th>
-                    <td class="bottom-row"></th>
+                    <td contenteditable="true" class="input-row" data-hour="12" ></th>
+                    <td class="button-row"><button type="button" data-hour="12" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-clipboard-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3zM8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
+                      </svg></button></th>
                 </tr>
             </thead>
             <thead class=rowSix>
                 <tr>
                     <th scope = "row" class="time-row">1:00 PM</th>
-                    <td contenteditable="true" class="input-row"></th>
-                    <td class="bottom-row"></th>
+                    <td contenteditable="true" class="input-row" data-hour="13" ></th>
+                    <td class="button-row"><button type="button" data-hour="13" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-clipboard-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3zM8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
+                      </svg></button></th>
                 </tr>
             </thead>
             <thead class=rowSeven>
                 <tr>
                     <th scope = "row" class="time-row">2:00 PM</th>
-                    <td contenteditable="true" class="input-row"></th>
-                    <td class="bottom-row"></th>
+                    <td contenteditable="true" class="input-row" data-hour="14" ></th>
+                    <td class="button-row"><button type="button" data-hour="14" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-clipboard-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3zM8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
+                      </svg></button></th>
                 </tr>
             </thead>
             <thead class=rowEight>
                 <tr>
                     <th scope = "row" class="time-row">3:00 PM</th>
-                    <td contenteditable="true" class="input-row"></th>
-                    <td class="bottom-row"></th>
+                    <td contenteditable="true" class="input-row" data-hour="15"></th>
+                    <td class="button-row"><button type="button" data-hour="15" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-clipboard-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3zM8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
+                      </svg></button></th>
                 </tr>
             </thead>
                 <thead class=rowNine>
                 <tr>
                     <th scope = "row" class="time-row">4:00 PM</th>
-                    <td contenteditable="true" class="input-row"></th>
-                    <td class="bottom-row"></th>
+                    <td contenteditable="true" class="input-row" data-hour="16"></th>
+                    <td class="button-row"><button type="button" data-hour="16" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-clipboard-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3zM8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
+                      </svg></button></th>
                 </tr>
             </thead>
             <thead class=rowTen>
                 <tr>
                     <th scope = "row" class="time-row">5:00 PM</th>
-                    <td contenteditable="true" class="input-row"></th>
-                    <td class="bottom-row"></th>
+                    <td contenteditable="true" class="input-row" data-hour="17"></th>
+                    <td class="button-row"><button type="button" data-hour="17" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-clipboard-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3zM8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
+                      </svg></button></th>
                 </tr>
             </thead>
     
         </table>
-
     </div>
-
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+    <script src= "script.js"></script>
+</body>
 </html>
