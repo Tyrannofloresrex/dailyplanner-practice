@@ -25,7 +25,7 @@ for (let i = 0; i < contentSlots.length; i++) {
 
 var saveButtons = $(".btn");
 var planObject = JSON.parse(localStorage.getItem("plansData")) || {};
-// takes objects (key =data hour, value = plans text) and returns them to the write row based on the data identifer
+// takes objects (key =data hour, value = plans text) and returns them to the right row based on the data identifer
 for (var dataHour in planObject) {
   var rtrnVal = planObject[dataHour];
 
